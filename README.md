@@ -51,7 +51,7 @@ private void restoreOrCreatePresenter() {
 
 So what's that `presenterComponent` that creates a new presenter for me? It's simply an `Interface` that every `Dagger Component` extends, that needs to provide a `Presenter`:
 ```java
-public interface BaseComponent<T extends BasePresenter> {
+public interface PresenterComponent<T extends BasePresenter> {
 
     T getPresenter();
 }

@@ -69,7 +69,7 @@ public abstract class BasePresenter<T extends BaseView> {
     protected void onStop(boolean changingConfigurations) {
         if (!changingConfigurations) {
             // clear all subscriptions if activity is stopped normally
-            compositeDisposable.dispose();
+            compositeDisposable.clear();
         }
         viewReference = null;
     }

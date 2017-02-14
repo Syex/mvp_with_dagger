@@ -15,7 +15,7 @@ So I wanted to change my `Presenters`, so they survive the `Activity` recreation
 > **_Note:_** The following section requires you to be familar with `Dagger2` and `MVP`
 
 ## The solution
-First I needed to create this `Map`, that can be injected everywhere I needed it. I created a new class for that:
+First I needed to create some cache, that can be injected everywhere I needed it. I created a new class for that:
 ```java
 public final class PresenterCache {
 

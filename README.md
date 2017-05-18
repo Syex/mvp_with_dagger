@@ -3,7 +3,7 @@
 Recently I was looking for an example how to make my `Presenters` survive an `Activity` recreation when a configuration change occurs. All examples that I found were using `Fragments`, looked way too complicated or didn't use `Dagger`. So I decided come up with my own solution and setup this project, so it may help other people.
 
 ## The problem
-My project structure was built in a way, that a `Presenter` was coupled to it's view lifecycle. I did directly use `Activities`, so the `Presenter` was destroyed once the `Activity` was destroyed. That was fine for my project. Then I got to a point where I needed to run a long network operation. 
+My project structure was built in a way, that a `Presenter` was coupled to its view lifecycle. I did directly use `Activities`, so the `Presenter` was destroyed once the `Activity` was destroyed. That was fine for my project. Then I got to a point where I needed to run a long network operation. 
 
 On a button click the `Presenter` subscribed to an `Observable` that would perform the network operation. The `Presenter` updated the `View` with the progress. So far it worked. But on a screen rotation the `Activity` was recreated and therefore the `Presenter`, too. The new instance knew nothing about the progress.
 
